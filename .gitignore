@@ -1,0 +1,20 @@
+# Cache & temp
+*/Cache/
+*/cache/
+*/tmp/
+*.log
+
+# Big / sensitive apps
+google-chrome/
+chromium/
+BraveSoftware/
+discord/
+Code/
+vscode/
+
+# Session / runtime files
+*.lock
+*.pid
+
+# Thumbnails
+thumbnails/
