@@ -303,14 +303,11 @@ hl.bind(
     })
 )
 
--- Special workspace (scratchpad)
--- hl.bind(
---     mainMod .. " + SHIFT + S",
---     hl.dsp.window.move({
---         workspace = "special:magic",
---         follow = false,
---     })
--- )
+--SPLITTING WORKSPACE--
+
+hl.bind("SUPER + B",    hl.dsp.layout("swapsplit"))
+hl.bind("SUPER + X",    hl.dsp.layout("splitratio +0.1"))
+hl.bind("SUPER + Z",    hl.dsp.layout("splitratio -0.1"))
 
 -- Workspace scrolling
 hl.bind(
