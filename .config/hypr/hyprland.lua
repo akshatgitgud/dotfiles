@@ -55,10 +55,10 @@ hl.on("hyprland.start", function()
 	-- Automount removable drives
 	hl.exec_cmd("udiskie")
 
-	-- Vesktop
-	hl.exec_cmd(
-		"GDK_BACKEND=x11 ELECTRON_OZONE_PLATFORM_HINT=x11 vesktop --ozone-platform=x11 --enable-features=WebRTCPipeWireCapturer"
-	)
+-- 	-- Vesktop / commented cause blah
+-- 	hl.exec_cmd(
+-- 		"GDK_BACKEND=x11 ELECTRON_OZONE_PLATFORM_HINT=x11 vesktop --ozone-platform=x11 --enable-features=WebRTCPipeWireCapturer"
+-- 	)
 end)
 
 -----------------------------
@@ -232,13 +232,9 @@ hl.config({
 ----KEYBINDS-----
 -----------------
 
---------------------
--- KEYBINDINGS
---------------------
-
 local mainMod = "SUPER"
 
--- Applications
+-- Applications --
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + F", hl.dsp.exec_cmd("zen-browser"))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(notes))
@@ -247,18 +243,18 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind("SUPER + E", hl.dsp.exec_cmd("jome -d | wl-copy"))
 
--- Window management
+-- Window management --
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exit())
 hl.bind(mainMod .. " + W", hl.dsp.window.float({ action = "toggle" }))
 
--- Focus
+-- Focus --
 hl.bind(mainMod .. " + LEFT",  hl.dsp.focus({ direction = "l" }))
 hl.bind(mainMod .. " + RIGHT", hl.dsp.focus({ direction = "r" }))
 hl.bind(mainMod .. " + UP",    hl.dsp.focus({ direction = "u" }))
 hl.bind(mainMod .. " + DOWN",  hl.dsp.focus({ direction = "d" }))
 
--- Move windows
+-- Move windows --
 hl.bind(mainMod .. " + SHIFT + LEFT",
     hl.dsp.window.move({ direction = "l" }))
 
@@ -271,7 +267,7 @@ hl.bind(mainMod .. " + SHIFT + UP",
 hl.bind(mainMod .. " + SHIFT + DOWN",
     hl.dsp.window.move({ direction = "d" }))
 
--- Workspaces
+-- Workspaces --
 for i = 1, 9 do
     hl.bind(
         mainMod .. " + " .. i,
@@ -284,7 +280,7 @@ hl.bind(
     hl.dsp.focus({ workspace = "10" })
 )
 
--- Move active window to a workspace
+-- Move active window to a workspace --
 for i = 1, 9 do
     hl.bind(
         mainMod .. " + SHIFT + " .. i,
@@ -303,7 +299,7 @@ hl.bind(
     })
 )
 
---SPLITTING WORKSPACE--
+-- SPLITTING WORKSPACE --
 
 hl.bind("SUPER + B",    hl.dsp.layout("swapsplit"))
 hl.bind("SUPER + X",    hl.dsp.layout("splitratio +0.1"))
@@ -484,6 +480,7 @@ hl.bind(
 )
 
 -- Brightness
+
 hl.bind(
     "XF86MonBrightnessUp",
     hl.dsp.exec_cmd("brightnessctl s +5%")
@@ -494,12 +491,12 @@ hl.bind(
     hl.dsp.exec_cmd("brightnessctl s 5%-")
 )
 
---SOME SPOTIFY DRAWER THINGY
-hl.bind("SUPER + SPACE",    hl.dsp.workspace.toggle_special("Spotify"))
+-- --SOME SPOTIFY DRAWER THINGY
+-- hl.bind("SUPER + SPACE",    hl.dsp.workspace.toggle_special("Spotify"))
 
--------------------------------
----- WINDOW RULES -------------
--------------------------------
+-----------------------
+---- WINDOW RULES -----
+-----------------------
 
 -- Opacity
 
@@ -550,9 +547,9 @@ hl.window_rule({
 	opacity = "0.70 0.70",
 })
 
-------------------------------------------------
--- Float rules
-------------------------------------------------
+-----------------
+-- Float rules---
+-----------------
 
 for _, cls in ipairs({
 	"kvantummanager",
@@ -572,9 +569,9 @@ for _, cls in ipairs({
 	})
 end
 
-------------------------------------------------
--- Workspaces
-------------------------------------------------
+---------------
+-- Workspaces--
+---------------
 
 hl.window_rule({
 	match = { class = "^(zen|zen-alpha|zen-beta)$" },
@@ -596,9 +593,9 @@ hl.window_rule({
 	fullscreen = true,
 })
 
-------------------------------------------------
--- Mario project
-------------------------------------------------
+------------------
+-- Mario project--
+------------------
 
 hl.window_rule({
 	match = {
@@ -610,9 +607,10 @@ hl.window_rule({
 	size = { 1080, 720 },
 })
 
---SPOTIFY
+-----SPOTIFY-----
 hl.workspace_rule({
     workspace = "special:Spotify",
     gaps_in = 10,
     gaps_out = 20,
+	
 })
