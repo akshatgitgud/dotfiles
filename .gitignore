@@ -1,49 +1,30 @@
-# VSCodium
-VSCodium/
-
 # Browser profiles
 zen/
 
-# Qt
-QtProject/
-QtProject.conf
+# Editors
+VSCodium/
 
 # Application data
 BeeperTexts/
+QtProject/
+QtProject.conf
 Softdeluxe/
 obsidian/
 spotify/
 qBittorrent/
 kdeconnect/
+pupgui/
+rncbc.org/
+vesktop/
 
 # Runtime/cache
 pulse/
 wireplumber/
 go/
 
-# Generated files
-*.sqlite
-*.sqlite-shm
-*.sqlite-wal
-*.db
-
-# Cache & temp
+# Generic caches
 */Cache/
 */cache/
-*/tmp/
 *.log
-
-# Big / sensitive apps
-google-chrome/
-chromium/
-BraveSoftware/
-discord/
-Code/
-vscode/
-
-# Session / runtime files
 *.lock
 *.pid
-
-# Thumbnails
-thumbnails/
