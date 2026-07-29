@@ -1,5 +1,6 @@
-if status is-interactive
-# Commands to run in interactive sessions can go here
+# Force XDG Desktop Portal to start for Vesktop screensharing
+if not pgrep -f xdg-desktop-portal >/dev/null
+    /usr/lib/xdg-desktop-portal &>/dev/null &
+    disown
 end
-
-fish_add_path /home/monkey/.spicetify
+zoxide init fish | source

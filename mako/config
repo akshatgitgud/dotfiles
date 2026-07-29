@@ -1,26 +1,23 @@
-background-color=#1A1B1F
-text-color=#DADBDD
-border-color=#C75465
-border-size=2
-border-radius=10
+# Colors
+background-color=#303446CC
+text-color=#c6d0f5
+border-color=#babbf1
+progress-color=over #414559
 
-padding=12
-margin=20
+max-visible=3
+border-radius=7
+border-size=2
+padding=16
+margin=10
 
 font=JetBrainsMono Nerd Font 10
-max-icon-size=32
+icons=0
 
-default-timeout=2000
-ignore-timeout=false
+default-timeout=400
 anchor=top-right
 layer=overlay
-output=*
 
 [urgency=high]
-background-color=#C75465
-text-color=#1A1B1F
-border-color=#D9A72C
-
-[app-name=kdeconnectd]
-default-timeout=0
-
+background-color=#f38ba8
+text-color=#1e1e2e
+border-color=#fab387
