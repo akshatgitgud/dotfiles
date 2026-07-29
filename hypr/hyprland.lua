@@ -493,6 +493,10 @@ hl.bind(
     "XF86MonBrightnessDown",
     hl.dsp.exec_cmd("brightnessctl s 5%-")
 )
+
+--SOME SPOTIFY DRAWER THINGY
+hl.bind("SUPER + SPACE",    hl.dsp.workspace.toggle_special("Spotify"))
+
 -------------------------------
 ---- WINDOW RULES -------------
 -------------------------------
@@ -604,4 +608,11 @@ hl.window_rule({
 	float = true,
 	center = true,
 	size = { 1080, 720 },
+})
+
+--SPOTIFY
+hl.workspace_rule({
+    workspace = "special:Spotify",
+    gaps_in = 10,
+    gaps_out = 20,
 })
