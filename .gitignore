@@ -1,3 +1,32 @@
+# VSCodium
+VSCodium/
+
+# Browser profiles
+zen/
+
+# Qt
+QtProject/
+QtProject.conf
+
+# Application data
+BeeperTexts/
+Softdeluxe/
+obsidian/
+spotify/
+qBittorrent/
+kdeconnect/
+
+# Runtime/cache
+pulse/
+wireplumber/
+go/
+
+# Generated files
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+
 # Cache & temp
 */Cache/
 */cache/
