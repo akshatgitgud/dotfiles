@@ -28,3 +28,11 @@ go/
 *.log
 *.lock
 *.pid
+
+.config/gtk-3.0/
+.config/gtk-4.0/
+.config/nvim/
+.config/nwg-look/
+.config/spicetify/
+.config/xfce4/
+.config/xsettingsd/
