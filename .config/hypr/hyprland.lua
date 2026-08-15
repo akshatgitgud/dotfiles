@@ -45,7 +45,7 @@ hl.on("hyprland.start", function()
 
 	-- Wallpaper
 	hl.exec_cmd("awww-daemon --format xrgb")
-	hl.exec_cmd("sleep 1 && awww img /home/monkey/Downloads/for.png")
+	hl.exec_cmd("sleep 1 && awww img /home/monkey/dotfiles/wallpapers/for.png")
 
 	-- GVFS / MTP
 	hl.exec_cmd("/usr/lib/gvfsd")
@@ -53,7 +53,6 @@ hl.on("hyprland.start", function()
 
 	-- Automount removable drives
 	hl.exec_cmd("udiskie")
-
 end)
 
 -----------------------------
@@ -327,7 +326,7 @@ hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ to
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("kitty --class clipse --title 'clipse-floating' -e clipse"))
 
 -- Color picker
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(colorPicker .. " | wl-copy"))
+-- hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(colorPicker .. " | wl-copy"))
 
 -- Lock
 hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
@@ -345,7 +344,7 @@ hl.bind("PRINT", hl.dsp.exec_cmd("grimblast copysave screen " .. ss .. "/$(date 
 
 hl.bind("SUPER + PRINT", hl.dsp.exec_cmd("grimblast copysave active " .. ss .. "/$(date +'%Y-%m-%d_%H-%M-%S').png"))
 
-hl.bind("SUPER + ALT + PRINT", hl.dsp.exec_cmd("grimblast copysave area " .. ss .. "/$(date +'%Y-%m-%d_%H-%M-%S').png"))
+hl.bind("SUPER + P", hl.dsp.exec_cmd("grimblast copysave area " .. ss .. "/$(date +'%Y-%m-%d_%H-%M-%S').png"))
 
 -- Media --
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("pamixer -i 5"))
@@ -481,10 +480,3 @@ hl.window_rule({
 	opacity = "0.6 override 0.7 override",
 })
 
--- -----SPOTIFY-----
--- hl.workspace_rule({
---     workspace = "special:Spotify",
---     gaps_in = 10,
---     gaps_out = 20,
-
--- })
