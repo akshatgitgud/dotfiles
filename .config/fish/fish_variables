@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export EDITOR:nvim
-SETUVAR --export VISUAL:nvim
+SETUVAR --export EDITOR:/usr/sbin/nvim
+SETUVAR --export SUDO_EDITOR:/usr/sbin/nvim
+SETUVAR --export VISUAL:/usr/sbin/nvim
 SETUVAR __fish_initialized:4300
-SETUVAR fish_user_paths:/home/monkey/\x2espicetify
+SETUVAR fish_user_paths:/home/monkey/go/bin\x1e/usr/bin\x1e/usr/local/bin\x1e/usr/local/sbin\x1e/home/monkey/\x2ecargo/bin\x1e/home/monkey/\x2espicetify
