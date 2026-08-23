@@ -159,44 +159,40 @@ hl.config({
 
 -- Animation --
 
-hl.curve("myBezier", {
-	type = "bezier",
-	points = {
-		{ 0.05, 0.9 },
-		{ 0.1, 1.05 },
+hl.config({
+	animations = {
+		enabled = true,
 	},
 })
 
-hl.animation({
-	leaf = "windows",
-	enabled = true,
-	speed = 7,
-	bezier = "myBezier",
+-- Bezier curve
+hl.curve("myBezier", {
+	type = "bezier",
+	points = { { 0.05, 0.9 }, { 0.1, 1.05 } },
 })
 
-hl.animation({
-	leaf = "windowsIn",
-	enabled = true,
-	speed = 7,
-	bezier = "myBezier",
-	style = "popin",
-})
+-- Animations
+hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "myBezier" })
+hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "myBezier" })
+hl.animation({ leaf = "borderangle", enabled = true, speed = 8, bezier = "myBezier" })
 
-hl.animation({
-	leaf = "windowsOut",
-	enabled = true,
-	speed = 7,
-	bezier = "myBezier",
-	style = "popin",
-})
+hl.animation({ leaf = "windows", enabled = true, speed = 5, bezier = "myBezier", style = "slide" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 5, bezier = "myBezier", style = "slide" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 5, bezier = "myBezier", style = "slide" })
+hl.animation({ leaf = "windowsMove", enabled = true, speed = 4, bezier = "myBezier" })
 
-hl.animation({
-	leaf = "border",
-	enabled = true,
-	speed = 10,
-	bezier = "myBezier",
-	curve = "default",
-})
+hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "myBezier" })
+hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.46, bezier = "myBezier" })
+hl.animation({ leaf = "fade", enabled = true, speed = 4, bezier = "myBezier" })
+
+hl.animation({ leaf = "layers", enabled = true, speed = 3.81, bezier = "myBezier" })
+hl.animation({ leaf = "layersIn", enabled = true, speed = 4, bezier = "myBezier", style = "fade" })
+hl.animation({ leaf = "layersOut", enabled = true, speed = 1.5, bezier = "myBezier", style = "fade" })
+hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.79, bezier = "myBezier" })
+hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.39, bezier = "myBezier" })
+
+hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "myBezier", style = "slidefade 20%" })
+hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "myBezier" })
 
 ---------------
 ---- INPUT ----
@@ -479,4 +475,3 @@ hl.window_rule({
 	size = { "monitor_w", "monitor_h" }, -- fills the active monitor
 	opacity = "0.6 override 0.7 override",
 })
-
