@@ -7,7 +7,7 @@
   "theme.font.weight": 600,
   "terminal": "$terminal",
   "scalingPriority": "hyprland",
-  "theme.bar.scaling": 100,
+  "theme.bar.scaling": 85,
   "theme.osd.scaling": 80,
   "theme.bar.menus.menu.power.scaling": 75,
   "theme.bar.menus.menu.dashboard.scaling": 60,
