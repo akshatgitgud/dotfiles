@@ -15,8 +15,11 @@ alias unpush='git reset --soft HEAD~1; and git push --force origin main'
 #go
 alias gr='go run'
 
+#neofetch
+alias nf='neofetch'
+
 #hypr
-alias hyconf='v ~/.config/hypr/hyprland.lua'
+alias hypr='v ~/.config/hypr/hyprland.lua'
 
 # Force XDG Desktop Portal to start for Vesktop screensharing
 if not pgrep -f xdg-desktop-portal >/dev/null
