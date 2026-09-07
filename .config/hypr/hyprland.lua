@@ -47,12 +47,17 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("awww-daemon --format xrgb")
 	hl.exec_cmd("sleep 1 && awww img /home/monkey/dotfiles/wallpapers/for.png")
 
-	-- GVFS / MTP
-	hl.exec_cmd("/usr/lib/gvfsd")
+	-- GVFS / MTP --
+	hl.exec_cmd("/usr/r/lib/gvfsd")
 	hl.exec_cmd("/usr/lib/gvfs-mtp-volume-monitor")
 
-	-- Automount removable drives
+	-- Automount removable drives --
 	hl.exec_cmd("udiskie")
+
+	-- Zen browser --
+	hl.exec_cmd("zen-browser")
+	hl.exec_cmd("obsidian")
+	hl.exec_cmd("vscodium")
 end)
 
 -----------------------------
@@ -447,20 +452,24 @@ end
 -- ZEN --
 hl.window_rule({
 	match = { class = "^(zen|zen-alpha|zen-beta)$" },
-	workspace = "1",
+	workspace = "1 silent",
 	fullscreen = true,
 })
 
 -- SPOTIFY --
 hl.window_rule({
-	match = { class = "^(Spotify)$" },
-	workspace = "2 silent",
+	match = { class = "Spotify" },
+	workspace = "0 silent",
 })
 
--- STEAM --
 hl.window_rule({
-	match = { class = "^(steam)$" },
+	match = { class = "md.obsidian.Obsidian" },
 	workspace = "3 silent",
+})
+
+hl.window_rule({
+	match = { class = "codium" },
+	workspace = "2 silent",
 })
 
 -- CLIPSE --
