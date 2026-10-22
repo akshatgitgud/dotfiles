@@ -48,7 +48,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("sleep 1 && awww img /home/monkey/dotfiles/wallpapers/for.png")
 
 	-- GVFS / MTP --
-	hl.exec_cmd("/usr/r/lib/gvfsd")
+	hl.exec_cmd("/usr/lib/gvfsd")
 	hl.exec_cmd("/usr/lib/gvfs-mtp-volume-monitor")
 
 	-- Automount removable drives --
