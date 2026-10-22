@@ -459,7 +459,7 @@ hl.window_rule({
 -- SPOTIFY --
 hl.window_rule({
 	match = { class = "Spotify" },
-	workspace = "0 silent",
+	workspace = "10 silent",
 })
 
 hl.window_rule({
