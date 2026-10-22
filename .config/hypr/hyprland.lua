@@ -298,10 +298,10 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
--- Keyboard drag / resize
-hl.bind(mainMod .. " + Z", hl.dsp.window.drag(), { mouse = true })
-
-hl.bind(mainMod .. " + X", hl.dsp.window.resize(), { mouse = true })
+-- -- Keyboard drag / resize
+-- hl.bind(mainMod .. " + Z", hl.dsp.window.drag(), { mouse = true })
+--
+-- hl.bind(mainMod .. " + X", hl.dsp.window.resize(), { mouse = true })
 
 -- Resize active window (hold to repeat)
 hl.bind(mainMod .. " + CTRL + RIGHT", hl.dsp.window.resize({ x = 30, y = 0, relative = true }), { repeating = true })
