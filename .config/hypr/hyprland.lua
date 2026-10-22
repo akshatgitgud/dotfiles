@@ -48,7 +48,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("sleep 1 && awww img /home/monkey/dotfiles/wallpapers/for.png")
 
 	-- GVFS / MTP --
-	hl.exec_cmd("/usr/r/lib/gvfsd")
+	hl.exec_cmd("/usr/lib/gvfsd")
 	hl.exec_cmd("/usr/lib/gvfs-mtp-volume-monitor")
 
 	-- Automount removable drives --
@@ -233,8 +233,8 @@ hl.bind("SUPER + F", hl.dsp.exec_cmd("zen-browser"))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(notes))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("spotify-launcher"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + SHIFT +  E", hl.dsp.exec_cmd("jome -d | wl-copy"))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
-hl.bind("SUPER + E", hl.dsp.exec_cmd("jome -d | wl-copy"))
 
 -- Window management --
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
@@ -298,10 +298,10 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
--- Keyboard drag / resize
-hl.bind(mainMod .. " + Z", hl.dsp.window.drag(), { mouse = true })
-
-hl.bind(mainMod .. " + X", hl.dsp.window.resize(), { mouse = true })
+-- -- Keyboard drag / resize
+-- hl.bind(mainMod .. " + Z", hl.dsp.window.drag(), { mouse = true })
+--
+-- hl.bind(mainMod .. " + X", hl.dsp.window.resize(), { mouse = true })
 
 -- Resize active window (hold to repeat)
 hl.bind(mainMod .. " + CTRL + RIGHT", hl.dsp.window.resize({ x = 30, y = 0, relative = true }), { repeating = true })
@@ -480,7 +480,14 @@ hl.window_rule({
 		title = "^(clipse-floating)$",
 	},
 	float = true,
-	move = { 0, 0 },
-	size = { "monitor_w", "monitor_h" }, -- fills the active monitor
+	center = true,
+	size = { 622, 652 },
 	opacity = "0.6 override 0.7 override",
+})
+
+-- Suppress maximize events --
+hl.window_rule({
+	name = "suppress-maximize-events",
+	match = { class = ".*" },
+	suppress_event = "maximize",
 })
