@@ -233,8 +233,8 @@ hl.bind("SUPER + F", hl.dsp.exec_cmd("zen-browser"))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(notes))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("spotify-launcher"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + SHIFT +  E", hl.dsp.exec_cmd("jome -d | wl-copy"))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
-hl.bind("SUPER + E", hl.dsp.exec_cmd("jome -d | wl-copy"))
 
 -- Window management --
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
