@@ -480,7 +480,14 @@ hl.window_rule({
 		title = "^(clipse-floating)$",
 	},
 	float = true,
-	move = { 0, 0 },
-	size = { "monitor_w", "monitor_h" }, -- fills the active monitor
+	center = true,
+	size = { 622, 652 },
 	opacity = "0.6 override 0.7 override",
+})
+
+-- Suppress maximize events --
+hl.window_rule({
+	name = "suppress-maximize-events",
+	match = { class = ".*" },
+	suppress_event = "maximize",
 })
